@@ -1,11 +1,13 @@
 ---
+const {link} = Astro.props;
 ---
-
-<div class="grid grid-cols-1 my-4 border-2 rounded-2xl p-2">
-    <div class="flex justify-center">
-        <slot name="title" />
+<a href={link} target="_blank">
+    <div class="grid grid-cols-1 my-4 border-2 rounded-2xl p-2 hover:bg-teal-800 hover:bg-opacity-5 transition-all">
+        <div class="flex justify-center">
+            <slot name="title"/>
+        </div>
+        <div class="text-center mt-2">
+            <slot name="text"/>
+        </div>
     </div>
-    <div class="text-center mt-2">
-        <slot name="text" />
-    </div>
-</div>
+</a>

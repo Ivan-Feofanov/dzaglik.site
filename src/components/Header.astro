@@ -8,28 +8,25 @@ interface Props {
 
 const {title} = Astro.props;
 ---
-
-<astro>
-    <header class="mb-4">
-        <div class="grid md:place-content-start place-content-center">
-            <div class="grid place-content-start md:place-content-center">
-                <a href="/">
-                    <Image src={logo} alt="Dzaglik logo" width="200"/>
-                </a>
-            </div>
-            <div class="flex items-stretch gap-2.5 mt-4 self-start max-md:justify-center">
-                <!--Block for i18n-->
-                <!-- <Image src={ka} alt="Kartuli"/>
-                <Image src={ru} alt="Russian"/>
-                <Image src={en} alt="English"/> -->
+<header class="mb-4">
+    <div class="grid md:place-content-start place-content-center">
+        <div class="grid place-content-start md:place-content-center">
+            <a href="/">
+                <Image src={logo} alt="Dzaglik logo" width="200"/>
+            </a>
+        </div>
+        <div class="flex items-stretch gap-2.5 mt-4 self-start max-md:justify-center">
+            <!--Block for i18n-->
+            <!-- <Image src={ka} alt="Kartuli"/>
+            <Image src={ru} alt="Russian"/>
+            <Image src={en} alt="English"/> -->
+        </div>
+    </div>
+    <div class="relative justify-center items-center self-center flex w-full flex-col mt-11 px-16 max-md:max-w-full max-md:mt-10 max-md:px-5">
+        <div class="flex items-stretch gap-2.5 max-md:max-w-full max-md:flex-wrap">
+            <div class="text-teal-800 text-center text-3xl self-center grow my-auto max-md:max-w-full">
+                {title}
             </div>
         </div>
-        <div class="relative justify-center items-center self-center flex w-full flex-col mt-11 px-16 max-md:max-w-full max-md:mt-10 max-md:px-5">
-            <div class="flex items-stretch gap-2.5 max-md:max-w-full max-md:flex-wrap">
-                <div class="text-teal-800 text-center text-3xl self-center grow my-auto max-md:max-w-full">
-                    {title}
-                </div>
-            </div>
-        </div>
-    </header>
-</astro>
+    </div>
+</header>

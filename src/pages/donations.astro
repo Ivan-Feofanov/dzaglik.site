@@ -10,7 +10,7 @@ import DonationCard from "../components/DonationCard.astro";
     <div>
         Наши усилия сосредоточены на полной вакцинации, закупке еды, медицинской помощи, антипаразитарной обработке и
         стерилизациях. Всё о наших тратах вы можете увидеть в
-        <a href="https://docs.google.com/spreadsheets/d/1dPEKCNh1td829Mc2q43ItbZvJ458tR3Xk5mkEdkjI1I/edit#gid=1396228341" target="_blank">
+        <a class="text-teal-800 hover:underline" href="https://docs.google.com/spreadsheets/d/1dPEKCNh1td829Mc2q43ItbZvJ458tR3Xk5mkEdkjI1I/edit#gid=1396228341" target="_blank">
             финансовом отчете
         </a>.
     </div>
@@ -19,22 +19,22 @@ import DonationCard from "../components/DonationCard.astro";
         Если вы хотите помочь нашим питомцам, вы можете сделать это следующими способами:
     </div>
 
-    <DonationCard>
+    <DonationCard link="https://www.paypal.com/paypalme/dzaglik">
         <Image src={paypal} alt="logo" slot="title" height="72" />
         <div slot="text">
-            Для пожертвования с помощью PayPal вы можете воспользоваться <a href="https://www.paypal.com/paypalme/dzaglik">ссылкой</a>
+            Для пожертвования с помощью PayPal нажмите здесь
         </div>
     </DonationCard>
-    <DonationCard>
+    <DonationCard link="https://boosty.to/dzaglik.batumi">
         <Image src={boosty_logo} alt="logo" slot="title" height="72"  />
         <div slot="text">
-            Для регулярных пожертвования с российских карт вы можете подписаться на наш <a href="https://boosty.to/dzaglik.batumi">Boosty</a>
+            Для регулярных пожертвования с российских карт вы можете подписаться на наш Boosty
         </div>
     </DonationCard>
-    <DonationCard>
+    <DonationCard link="https://www.paypal.com/paypalme/dzaglik">
         <Image src={patreon} alt="logo" slot="title" height="72"  />
         <div slot="text">
-            Для регулярных пожертвований с других карт вы можете подписаться на наш <a href="https://www.paypal.com/paypalme/dzaglik">Patreon</a>
+            Для регулярных пожертвований с других карт вы можете подписаться на наш Patreon
         </div>
     </DonationCard>
     <DonationCard>
@@ -78,10 +78,9 @@ import DonationCard from "../components/DonationCard.astro";
                 UAH🇺🇦
             </div>
             <div class="text-left">
-                Follow this <a href="https://send.monobank.ua/jar/55Nztjqy3N">link</a> to access the Monobank jar that belongs to one of Dzaglik team members - Анастасiя С.
+                Follow this <a class="text-teal-800 hover:underline" href="https://send.monobank.ua/jar/55Nztjqy3N" target="_blank">link</a> to access the Monobank jar that belongs to one of Dzaglik team members - Анастасiя С.
             </div>
         </div>
     </DonationCard>
-
 
 </Layout>
