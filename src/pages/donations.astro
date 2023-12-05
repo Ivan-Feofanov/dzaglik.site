@@ -1,32 +1,87 @@
 ---
-title: Помощь проекту
-layout: ../layouts/Layout.astro
+import { Image } from "astro:assets"
+import paypal from "../assets/images/paypal_logo.svg"
+import patreon from "../assets/images/patreon.svg"
+import Layout from "../layouts/Layout.astro";
+import boosty_logo from "../assets/images/boosty_logo.svg"
+import DonationCard from "../components/DonationCard.astro";
 ---
-Наши усилия сосредоточены на полной вакцинации, закупке еды, медицинской помощи, антипаразитарной обработке и стерилизациях. Всё о наших тратах вы можете увидеть в [финансовом отчете](https://docs.google.com/spreadsheets/d/1dPEKCNh1td829Mc2q43ItbZvJ458tR3Xk5mkEdkjI1I/edit#gid=1396228341)
+<Layout title="Помощь проекту">
+    <div>
+        Наши усилия сосредоточены на полной вакцинации, закупке еды, медицинской помощи, антипаразитарной обработке и
+        стерилизациях. Всё о наших тратах вы можете увидеть в
+        <a href="https://docs.google.com/spreadsheets/d/1dPEKCNh1td829Mc2q43ItbZvJ458tR3Xk5mkEdkjI1I/edit#gid=1396228341" target="_blank">
+            финансовом отчете
+        </a>.
+    </div>
 
-**Спасибо, что сделали этот шаг для поддержки нас!**
+    <div class="my-4">
+        Если вы хотите помочь нашим питомцам, вы можете сделать это следующими способами:
+    </div>
+
+    <DonationCard>
+        <Image src={paypal} alt="logo" slot="title" height="72" />
+        <div slot="text">
+            Для пожертвования с помощью PayPal вы можете воспользоваться <a href="https://www.paypal.com/paypalme/dzaglik">ссылкой</a>
+        </div>
+    </DonationCard>
+    <DonationCard>
+        <Image src={boosty_logo} alt="logo" slot="title" height="72"  />
+        <div slot="text">
+            Для регулярных пожертвования с российских карт вы можете подписаться на наш <a href="https://boosty.to/dzaglik.batumi">Boosty</a>
+        </div>
+    </DonationCard>
+    <DonationCard>
+        <Image src={patreon} alt="logo" slot="title" height="72"  />
+        <div slot="text">
+            Для регулярных пожертвований с других карт вы можете подписаться на наш <a href="https://www.paypal.com/paypalme/dzaglik">Patreon</a>
+        </div>
+    </DonationCard>
+    <DonationCard>
+        <span slot="title" class="text-4xl">Банковский перевод</span>
+        <div slot="text">
+            <div class="mt-4">
+                GEL🇬🇪 USD🇺🇸 EUR🇪🇺 GBP🇬🇧
+            </div>
+            <div class="text-left">
+                <div>
+                    <span class="font-bold">Bank name:</span> Bank of Georgia
+                </div>
+                <div>
+                    <span class="font-bold">Account number:</span> GE43BG0000000530388567
+                </div>
+                <div>
+                    <span class="font-bold">Account holder:</span> NAKASHIDZE MERAB
+                </div>
+                <div>
+                    <span class="font-bold">SWIFT / BIC:</span> BAGAGE22
+                </div>
+                <div>
+                    <span class="font-bold">Address (account holder):</span> Zhiuli Shartava 8, Batumi, Georgia, 6010
+                </div>
+            </div>
+            <div class="mt-4">
+                RUB🇷🇺
+            </div>
+            <div class="text-left">
+                <div>
+                    <span class="font-bold">Bank name:</span> Tinkoff Bank
+                </div>
+                <div>
+                    <span class="font-bold">Card number:</span> 5536 9138 4041 9655
+                </div>
+                <div>
+                    <span class="font-bold">Account holder:</span> Екатерина Вадимовна Л.
+                </div>
+            </div>
+            <div class="mt-4">
+                UAH🇺🇦
+            </div>
+            <div class="text-left">
+                Follow this <a href="https://send.monobank.ua/jar/55Nztjqy3N">link</a> to access the Monobank jar that belongs to one of Dzaglik team members - Анастасiя С.
+            </div>
+        </div>
+    </DonationCard>
 
 
----
-💎 **Donate in GEL, USD, EUR**
-
-Bank name: **Bank of Georgia**
-
-**Account number: GE43BG0000000530388567**
-
-**Account holder**: NAKASHIDZE MERAB
-
----
-💎 **Donate in RUB**
-
-**Bank name: Tinkoff Bank**
-
-**Card number: 5536 9138 4041 9655**
-
-**Account holder**: Екатерина Вадимовна Л.
-
----
-**💎 Donate in UAH**
-
-Follow this [link](https://send.monobank.ua/jar/55Nztjqy3N) to access the Monobank jar that belongs to one of Dzaglik team members - Анастасiя С.
-
+</Layout>
